@@ -1,0 +1,31 @@
+{
+  "name": "archive-dir",
+  "version": "1.0.0-beta2",
+  "description": "",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist &&  webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "zip",
+    "unzip",
+    "zip-dir",
+    "unzip-dir"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.0",
+    "babel-preset-env": "^1.7.0",
+    "compressing": "^1.3.1",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
