@@ -3,12 +3,12 @@ const babelConfig = require("./babel/babel.config");
 
 module.exports = {
   entry: {
-    index: `./src/index.js`,
+    index: `./src/index.js`
   },
   output: {
     path: path.resolve(__dirname, `./dist`),
     filename: "[name].js",
-    libraryTarget: "commonjs",
+    libraryTarget: "commonjs"
   },
   target: "node",
   mode: "production",
@@ -20,6 +20,16 @@ module.exports = {
         loader: "babel-loader",
         options: babelConfig()
       }
+    ]
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      })
     ]
   }
 };
