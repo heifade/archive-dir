@@ -1,5 +1,6 @@
 const path = require("path");
 const babelConfig = require("./babel/babel.config");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   entry: {
