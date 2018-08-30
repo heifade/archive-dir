@@ -1,19 +1,4 @@
-const compressing = require("compressing");
+import { zipDir } from "./zipDir";
+import { unzipDir } from "./unzipDir";
 
-export async function zipDir(dir, zipFile) {
-  return new Promise((resolve, reject) => {
-    compressing.zip
-      .compressDir(dir, zipFile)
-      .then(resolve)
-      .catch(reject);
-  });
-}
-
-export async function unzipDir(zipFile, dir) {
-  return new Promise((resolve, reject) => {
-    compressing.zip
-      .uncompress(zipFile, dir)
-      .then(resolve)
-      .catch(reject);
-  });
-}
+export { zipDir, unzipDir };

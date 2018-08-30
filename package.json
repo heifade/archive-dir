@@ -1,6 +1,6 @@
 {
   "name": "archive-dir",
-  "version": "1.0.0-beta5",
+  "version": "1.0.0-beta6",
   "description": "",
   "main": "./dist/index.js",
   "files": [
@@ -17,7 +17,10 @@
   ],
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "pump": "^3.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "babel-core": "^6.26.3",
