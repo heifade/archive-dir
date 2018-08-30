@@ -1,6 +1,5 @@
 const path = require("path");
 const babelConfig = require("./babel/babel.config");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -21,16 +20,6 @@ module.exports = {
         loader: "babel-loader",
         options: babelConfig()
       }
-    ]
-  },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          warnings: false
-        }
-      })
     ]
   }
 };

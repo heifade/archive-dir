@@ -9,7 +9,7 @@ async function f() {
     fs.mkdirSync(zipText);
   }
 
-  await zipDir(resolve(__dirname, ".."), `${zipText}/zipFile.zip`);
+  await zipDir(resolve(__dirname, "."), `${zipText}/zipFile.zip`);
   await unzipDir(`${zipText}/zipFile.zip`, `${zipText}`);
 }
 
