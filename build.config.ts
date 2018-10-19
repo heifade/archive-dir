@@ -5,9 +5,10 @@ const config: BuildConfig = {
   output: {
     dir: "dist",
     file: "index.js",
-    mini: true,
+    mini: false,
     format: "cjs"
-  }
+  },
+  external: ["compressing"]
 };
 
 export default config;
