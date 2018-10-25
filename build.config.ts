@@ -1,14 +1,21 @@
 import { BuildConfig } from "happywork-node-builder";
 
 const config: BuildConfig = {
-  input: "src/index.js",
-  output: {
-    dir: "dist",
-    file: "index.js",
-    mini: false,
-    format: "cjs"
+  input: {
+    index: "src/index.ts"
   },
-  external: ["compressing"]
+  output: [
+    {
+      dir: "lib",
+      format: "cjs"
+    },
+    {
+      dir: "es",
+      format: "es"
+    }
+  ],
+  external: ["compressing"],
+  mini: false
 };
 
 export default config;

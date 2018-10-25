@@ -1,13 +1,17 @@
 {
   "name": "archive-dir",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "typings": "./ts/index.d.ts",
   "files": [
-    "dist"
+    "es",
+    "lib",
+    "ts"
   ],
   "scripts": {
-    "build": "happywork-node-builder"
+    "build": "happywork-node-builder build && tsc"
   },
   "keywords": [
     "zip",
@@ -18,7 +22,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "happywork-node-builder": "^1.0.17",
+    "happywork-node-builder": "^1.0.52",
     "mkdirp": "^0.5.1",
     "pump": "^3.0.0",
     "rimraf": "^2.6.2"
